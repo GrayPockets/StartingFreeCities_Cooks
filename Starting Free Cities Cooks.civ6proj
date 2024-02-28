@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>[COLOR:184,134,11,255]GrayPockets[ENDCOLOR] - Starting Free Cities - Cooks</Name>
+    <Guid>2538518e-6b25-4244-9374-67d47fbc04d5</Guid>
+    <ProjectGuid>c313a769-a425-4c3d-b104-aaf58ce79252</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>Cooks for Starting Free Cities</Teaser>
+    <Description>This mod cooks several items in "Starting Free Cities"[NEWLINE][NEWLINE][ICON_BULLET] Correct count of Free Cities (off by one)[NEWLINE][NEWLINE]Mod Support[NEWLINE][ICON_BULLET] Free City States</Description>
+    <Authors>GrayPockets</Authors>
+    <SpecialThanks>HandyVac</SpecialThanks>
+    <AffectsSavedGames>false</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+    <AssemblyName>GrayPockets.StartingFreeCities.Cooks</AssemblyName>
+    <RootNamespace>GrayPockets.StartingFreeCities.Cooks</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><ImportFiles id="Import_StartingFreeCitiesCooks"><Properties><LoadOrder>1</LoadOrder></Properties><File>Lua/StartingFreeCities_Main.lua</File></ImportFiles></InGameActions>]]></InGameActionData>
+    <AssociationData><![CDATA[<Associations>
+  <Dependency type="Mod" title="Starting Free Cities" id="3fd23d5e-b22f-42dd-a360-2eb3165ec48b" />
+  <Reference type="Mod" title="Free City States" id="5d0e507f-42f7-4738-6fd4-4f3ca98f21ba" />
+</Associations>]]></AssociationData>
+    <ActionCriteriaData><![CDATA[<ActionCriteria></ActionCriteria>]]></ActionCriteriaData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".gitignore">
+      <SubType>Content</SubType>
+    </None>
+    <Content Include="Lua\StartingFreeCities_Main.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Starting Free Cities Cooks.png">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="Starting Free Cities Cooks.xcf">
+      <SubType>Content</SubType>
+    </None>
+    <None Include="README.md">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lua\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
